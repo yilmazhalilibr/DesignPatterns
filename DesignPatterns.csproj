@@ -58,6 +58,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DecoratorDesignPattern\Beverage\Beverage.cs" />
+    <Compile Include="DecoratorDesignPattern\Condiment\CondimentDecorator.cs" />
+    <Compile Include="DecoratorDesignPattern\Beverage\DarkRoast.cs" />
+    <Compile Include="DecoratorDesignPattern\Beverage\HouseBlend.cs" />
+    <Compile Include="DecoratorDesignPattern\Beverage\Tea.cs" />
+    <Compile Include="DecoratorDesignPattern\Beverage\Espresso.cs" />
+    <Compile Include="DecoratorDesignPattern\Condiment\Milk.cs" />
+    <Compile Include="DecoratorDesignPattern\Condiment\Mocha.cs" />
+    <Compile Include="DecoratorDesignPattern\Condiment\Soy.cs" />
+    <Compile Include="FactoryDesignPattern\Pizza.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaCreatedStyle\ChicagoStylePizza\ChicagoStyleCheesePizza.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaCreatedStyle\ChicagoStylePizza\ChicagoStyleClamPizza.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaCreatedStyle\ChicagoStylePizza\ChicagoStylePepperoniPizza.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaStores\ChicagoStylePizzaStore.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaCreatedStyle\ChicagoStylePizza\ChicagoStyleVeggiePizza.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaCreatedStyle\NYStylePizza\NYStyleCheesePizza.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaCreatedStyle\NYStylePizza\NYStyleClamPizza.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaCreatedStyle\NYStylePizza\NYStylePepperoniPizza.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaStores\NYStylePizzaStore.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaCreatedStyle\NYStylePizza\NYStyleVeggiePizza.cs" />
+    <Compile Include="FactoryDesignPattern\PizzaStores\PizzaStore.cs" />
     <Compile Include="ObserverDesignPattern\HeadQuarters.cs" />
     <Compile Include="ObserverDesignPattern\IOperator.cs" />
     <Compile Include="ObserverDesignPattern\OldObservers\CurrentConditionsDisplay.cs" />
