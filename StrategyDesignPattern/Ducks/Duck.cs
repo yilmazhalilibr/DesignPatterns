@@ -15,11 +15,11 @@ namespace DesignPatterns
 
         public abstract void Display();
 
-        public void PerformFly()
+        public virtual void PerformFly()
         {
             flyBehavior.Fly();
         }
-        public void PerformQuack()
+        public virtual void PerformQuack()
         {
             quackBehavior.Quack();
         }
