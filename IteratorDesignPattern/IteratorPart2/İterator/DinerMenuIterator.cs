@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public class DinerMenuIterator : Iterator
+    public class DinerMenuIterator : IteratorDesignPattern.IteratorPart2.IIterator
     {
         MenuItem[] _items;
         int _position;

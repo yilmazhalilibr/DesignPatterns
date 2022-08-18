@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.IteratorDesignPattern.IteratorPart2
 {
-    public interface Iterator
+    public interface IIterator
     {
         bool HashNext();
         object Next();

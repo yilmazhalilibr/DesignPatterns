@@ -18,7 +18,7 @@ namespace DesignPatterns
             pancakeHouseMenu = new PancakeHouseMenu();
             dinerMenu = new DinerMenu();
             breakFastItems = pancakeHouseMenu.GetMenuList();
-            lunchItems = dinerMenu.GetMenuItems();
+            //lunchItems = dinerMenu.GetMenuItems();
         }
         public void GetBreakFastItems()
         {
@@ -29,7 +29,7 @@ namespace DesignPatterns
                 Console.WriteLine();
             }
         }
-        public void GetLunchItems()
+        /*public void GetLunchItems()
         {
             for (int i = 0; i < lunchItems.Length; i++)
             {
@@ -37,6 +37,6 @@ namespace DesignPatterns
                 Console.WriteLine($"{menuItem.GetName()} \nPrice: {menuItem.GetPrice()} \nDescription: {menuItem.GetDescription()}");
                 Console.WriteLine();
             }
-        }
+        }*/
     }
 }

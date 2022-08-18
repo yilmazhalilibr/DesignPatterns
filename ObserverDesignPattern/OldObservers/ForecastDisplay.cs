@@ -8,20 +8,19 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public class ForecastDisplay : IObserver, IDisplayElement 
+    public class ForecastDisplay : IObserver, IDisplayElement
     {
-        private float currentPressure = 29.92f;
-        private float lastPressure;
-        public ForecastDisplay(IObservable<WeatherData> observable) 
+
+        public ForecastDisplay(IObservable<WeatherData> observable)
         {
-          
+
         }
         public void Display()
         {
-            Console.WriteLine("Fore cast whaether state : " );
+            Console.WriteLine("Fore cast whaether state : ");
         }
 
-   
+
 
         public void Update(float temp, float humidity, float pressure)
         {

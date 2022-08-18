@@ -32,10 +32,14 @@ namespace DesignPatterns
                 _numberOfItems++;
             }
         }
-
+        /*
         public MenuItem[] GetMenuItems()
         {
             return _menuItems;
+        }*/
+        public IteratorDesignPattern.IteratorPart2.IIterator CreateIterator() 
+        {
+            return new DinerMenuIterator(_menuItems);
         }
     }
 }

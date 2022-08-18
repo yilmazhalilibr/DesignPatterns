@@ -95,11 +95,12 @@
     <Compile Include="IteratorDesignPattern\IteratorPart1\PersonelAggregate.cs" />
     <Compile Include="IteratorDesignPattern\IteratorPart1\PersonelIterator.cs" />
     <Compile Include="IteratorDesignPattern\IteratorPart2\DinerMenu.cs" />
-    <Compile Include="IteratorDesignPattern\IteratorPart2\DinerMenuIterator.cs" />
-    <Compile Include="IteratorDesignPattern\IteratorPart2\Iterator.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart2\İterator\DinerMenuIterator.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart2\IIterator.cs" />
     <Compile Include="IteratorDesignPattern\IteratorPart2\MenuItem.cs" />
     <Compile Include="IteratorDesignPattern\IteratorPart2\PancakeHouseMenu.cs" />
     <Compile Include="IteratorDesignPattern\IteratorPart2\PrintMenu.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart2\İterator\Waitress.cs" />
     <Compile Include="ObserverDesignPattern\HeadQuarters.cs" />
     <Compile Include="ObserverDesignPattern\IOperator.cs" />
     <Compile Include="ObserverDesignPattern\OldObservers\CurrentConditionsDisplay.cs" />
