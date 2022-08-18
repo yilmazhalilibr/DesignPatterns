@@ -12,10 +12,12 @@ namespace DesignPatterns
             /// 
             /// 
             /////////////////////// Strategy Desing Pattern Start ///////////////////////------------------------------
-            /*Duck duck = new DecoyDuck();
+            /*
+            Duck duck = new DecoyDuck();
             duck.Display();
             duck.PerformQuack();
-            duck.PerformFly();*/
+            duck.PerformFly();
+            */
             /////////////////////// Strategy Desing Pattern End ///////////////////////
             ///
             /// 
@@ -39,7 +41,8 @@ namespace DesignPatterns
             Console.WriteLine("");
             redFleetBase.AddOperator(new TankOperator { TankId = 701 });
             redFleetBase.AddOperator(new TankOperator { TankId = 801 });
-            redFleetBase.Information = "Sınır ihlali.";*/
+            redFleetBase.Information = "Sınır ihlali.";
+            */
             /////////////////////// Observer Desing Pattern End ///////////////////////
             ///
             /// 
@@ -51,12 +54,14 @@ namespace DesignPatterns
             /// 
             /// 
             /////////////////////// Decorator Desing Pattern Start ///////////////////////------------------------------
-            /* Beverage beverage = new Espresso();
+            /* 
+             Beverage beverage = new Espresso();
              Console.WriteLine(beverage.GetDescription() + " $ " + beverage.Cost());
              Beverage darkRoast = new DarkRoast();
              darkRoast = new Milk(darkRoast);
              darkRoast = new Soy(darkRoast);
-             Console.WriteLine(darkRoast.GetDescription() + " $ " + darkRoast.Cost());*/
+             Console.WriteLine(darkRoast.GetDescription() + " $ " + darkRoast.Cost());
+            */
             /////////////////////// Decorator Desing Pattern End ///////////////////////
             ///
             /// 
@@ -72,8 +77,10 @@ namespace DesignPatterns
             ///
             ///
             ///
-            /* PizzaStore store = new NYStylePizzaStore();
-               Pizza pizza = store.OrderPizza("cheese", store);*/
+            /* 
+             PizzaStore store = new NYStylePizzaStore();
+             Pizza pizza = store.OrderPizza("cheese", store);
+            */
             /////////////////////// Factory Desing Pattern End ///////////////////////
             ///
             /// 
@@ -89,7 +96,7 @@ namespace DesignPatterns
             ChocolateBoiler.Instance.Drain();
             ChocolateBoiler.Instance.Fill();
             ChocolateBoiler.Instance.Boil();
-             */
+            */
             /////////////////////// Singleton Desing Pattern End ///////////////////////
             ///
             /// 
@@ -101,7 +108,8 @@ namespace DesignPatterns
             ///
             ///
             /////////////////////// Command Desing Pattern Start ///////////////////////------------------------------
-            /* SimpleRemoteControl simpleRemoteControl = new SimpleRemoteControl();
+            /*
+             SimpleRemoteControl simpleRemoteControl = new SimpleRemoteControl();
              Light light = new Light();
              LightOnCommand lightOn = new LightOnCommand(light);
              GarageDoor door = new GarageDoor();
@@ -109,7 +117,8 @@ namespace DesignPatterns
              simpleRemoteControl.SetCommand(lightOn);
              simpleRemoteControl.ButtonWasPressed();
              simpleRemoteControl.SetCommand(garageDoorOpen);
-             simpleRemoteControl.ButtonWasPressed();*/
+             simpleRemoteControl.ButtonWasPressed();
+            */
             /////////////////////// Command Desing Pattern End ///////////////////////
             ///
             ///
@@ -133,7 +142,50 @@ namespace DesignPatterns
             ///
             ///
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///
+            ///
+            ///
+            ///
+            /////////////////////// Template Desing Pattern Start ///////////////////////------------------------------
+            /*
+            Coffe coffe = new Coffe();
+            coffe.PrepareRecipe();
+            */
+            /////////////////////// Template Desing Pattern End ///////////////////////
+            ///
+            ///
+            ///
+            ///
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///
+            ///
+            ///
+            ///
+            /////////////////////// Iterator  Desing Pattern Start ///////////////////////------------------------------
+            /*
+            PersonelAggregate aggregate = new PersonelAggregate();
+            aggregate.Add(new Personel { Id = 1, Name = "Gençay", LastName = "Yıldız" });
+            aggregate.Add(new Personel { Id = 2, Name = "Ahmet", LastName = "Çakmak" });
+            aggregate.Add(new Personel { Id = 3, Name = "Mehmet", LastName = "Aslıbay" });
+            aggregate.Add(new Personel { Id = 4, Name = "Ayşe", LastName = "Solmaz" });
+            aggregate.Add(new Personel { Id = 5, Name = "Fatma", LastName = "Nurgül" });
+            IIterator iterator = aggregate.CreateIterator();
+            while (iterator.HasItem())
+            {
+                Console.WriteLine($"ID : {iterator.CurrentItem().Id}\nAdı : {iterator.CurrentItem().Name}\nSoyadı : {iterator.CurrentItem().LastName}\n*****");
+                iterator.NextItem();
+            }
+            */
 
+            PrintMenu menu = new PrintMenu();
+            menu.GetBreakFastItems();
+
+            /////////////////////// Iterator  Desing Pattern End ///////////////////////
+            ///
+            ///
+            ///
+            ///
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 

@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -50,6 +50,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Mobile" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -87,6 +89,17 @@
     <Compile Include="FactoryDesignPattern\PizzaStores\NYStylePizzaStore.cs" />
     <Compile Include="FactoryDesignPattern\PizzaCreatedStyle\NYStylePizza\NYStyleVeggiePizza.cs" />
     <Compile Include="FactoryDesignPattern\PizzaStores\PizzaStore.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart1\IAggregate.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart1\IIterator.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart1\Personel.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart1\PersonelAggregate.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart1\PersonelIterator.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart2\DinerMenu.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart2\DinerMenuIterator.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart2\Iterator.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart2\MenuItem.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart2\PancakeHouseMenu.cs" />
+    <Compile Include="IteratorDesignPattern\IteratorPart2\PrintMenu.cs" />
     <Compile Include="ObserverDesignPattern\HeadQuarters.cs" />
     <Compile Include="ObserverDesignPattern\IOperator.cs" />
     <Compile Include="ObserverDesignPattern\OldObservers\CurrentConditionsDisplay.cs" />
@@ -120,6 +133,9 @@
     <Compile Include="ObserverDesignPattern\OldObservers\ISubject.cs" />
     <Compile Include="ObserverDesignPattern\OldObservers\ThirdPartyDisplay.cs" />
     <Compile Include="ObserverDesignPattern\TankOperator.cs" />
+    <Compile Include="TemplateDesignPattern\CaffeineBeverage.cs" />
+    <Compile Include="TemplateDesignPattern\Coffe.cs" />
+    <Compile Include="TemplateDesignPattern\Tea.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
