@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.IteratorDesignPattern.IteratorPart2;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,11 @@ namespace DesignPatterns
         public DinerMenu()
         {
             _menuItems = new MenuItem[MAX_ITEMS];
+            AddItem("Vegetarian BLT", "(Fakin’) Bacon with lettuce & tomato on whole wheat", true, 2.99);
+            AddItem("BLT", "Bacon with lettuce & tomato on whole wheat", false, 2.99);
+            AddItem("Soup of the day", "Soup of the day, with a side of potato salad", true, 3.29);
+            AddItem("Hotdog", "A hot dog, with saurkraut, relish, onions, topped with cheese", false, 3.05);
+
         }
 
         public void AddItem(string name, string description, bool vegetarian, double price)
@@ -37,9 +43,10 @@ namespace DesignPatterns
         {
             return _menuItems;
         }*/
-        public IteratorDesignPattern.IteratorPart2.IIterator CreateIterator() 
+        public IEnumerator CreateIterator()
         {
-            return new DinerMenuIterator(_menuItems);
+            IEnumerator enumerator = _menuItems.GetEnumerator();
+            return enumerator;
         }
     }
 }

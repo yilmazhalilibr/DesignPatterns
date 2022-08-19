@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public class MallardDuck : Duck
+    public class MallardDuck : Duck , IQuackable
     {
 
         public MallardDuck()
@@ -20,6 +20,11 @@ namespace DesignPatterns
 
 
 
+        }
+
+        public void Quack()
+        {
+            Console.WriteLine("Quack_Mallard");
         }
     }
 }

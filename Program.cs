@@ -1,4 +1,9 @@
-﻿using System;
+﻿using DesignPatterns;
+using DesignPatterns.CompoundDesignPattern;
+using DesignPatterns.IteratorDesignPattern.IteratorPart2;
+using DesignPatterns.ProxyDesignPattern.Proxy;
+using DesignPatterns.StateDesignPattern;
+using System;
 
 namespace DesignPatterns
 {
@@ -161,7 +166,7 @@ namespace DesignPatterns
             ///
             ///
             ///
-            /////////////////////// Iterator  Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Iterator & Composite  Desing Pattern Start ///////////////////////------------------------------
             /*
             PersonelAggregate aggregate = new PersonelAggregate();
             aggregate.Add(new Personel { Id = 1, Name = "Gençay", LastName = "Yıldız" });
@@ -176,11 +181,102 @@ namespace DesignPatterns
                 iterator.NextItem();
             }
             */
+            // IENUMATOR
+            /*
+            PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
+            DinerMenu dinerMenu = new DinerMenu();
+            Waitress waitress = new Waitress(pancakeHouseMenu,dinerMenu);
+            waitress.PrintMenu();
+            */
+            /////////////////////// Iterator & Composite Desing Pattern End ///////////////////////
+            ///
+            ///
+            ///
+            ///
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///
+            ///
+            ///
+            ///
+            /////////////////////// State Desing Pattern Start ///////////////////////------------------------------
+            ///
+            /*
+            GumballMachine gumballMachine = new GumballMachine(5);
+            Console.WriteLine(gumballMachine);
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            Console.WriteLine(gumballMachine);
+            gumballMachine.InsertQuarter();
+            gumballMachine.EjectQuarter();
+            gumballMachine.TurnCrank();
+            Console.WriteLine(gumballMachine);
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            gumballMachine.EjectQuarter();
+            Console.WriteLine(gumballMachine);
+            gumballMachine.InsertQuarter();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            Console.WriteLine(gumballMachine);
+            */
+            /*
+            MusicPlayer musicPlayer = new MusicPlayer();
+            musicPlayer.Play();
+            musicPlayer.Stop();
+            Console.WriteLine("*******");
+            musicPlayer.Stop();
+            Console.WriteLine("*******");
+            musicPlayer.Play();
+            */
+            /////////////////////// State Desing Pattern End ///////////////////////
+            ///
+            ///
+            ///
+            ///
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///
+            ///
+            ///
+            ///
+            /////////////////////// Proxy Desing Pattern Start ///////////////////////------------------------------
+            /*
+            string user, password;
+            double price;
+            while (true)
+            {
+                Console.WriteLine("Please type user name");
+                user = Console.ReadLine();
+                Console.WriteLine("Please type password");
+                password = Console.ReadLine();
+                Console.WriteLine("Enter the fee you want to pay.");
+                price = Convert.ToDouble(Console.ReadLine());
+                IBank bank = new ProxyBank(user,password);
+                bank.DoPay(price);
+                Console.WriteLine("*************************");
+            }
+            */
+            /////////////////////// Proxy Desing Pattern End ///////////////////////
+            ///
+            ///
+            ///
+            ///
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///
+            ///
+            ///
+            ///
+            /////////////////////// Compound Desing Pattern Start ///////////////////////------------------------------
+            Program similator = new Program();
+            AbstractDuckFactory factory = new CountingDuckFactory();
+            similator.Simulate(factory);
 
-            PrintMenu menu = new PrintMenu();
-            menu.GetBreakFastItems();
-
-            /////////////////////// Iterator  Desing Pattern End ///////////////////////
+            /////////////////////// Compound Desing Pattern End ///////////////////////
             ///
             ///
             ///
@@ -192,21 +288,49 @@ namespace DesignPatterns
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             Console.ReadLine();
         }
+        ///////////////////// Compound Pattern Method /////////////////////
+        //This method for Compound Design Pattern....
+        void Simulate(AbstractDuckFactory duckFactory)
+        {
+            IQuackable mallardDuck = duckFactory.CreateMallardDuck();
+            IQuackable redheadDuck = duckFactory.CreateRedheadDuck();
+            IQuackable duckCall = duckFactory.CreateDuckCall();
+            IQuackable rubberDuck = duckFactory.CreateRubberDuck();
+            IQuackable gooseDuck = new GooseAdapter(new Goose());
+            Console.WriteLine("\n***Duck Simulator***");
+            Flock flockOfDucks = new Flock();
+            Flock flockOfMallards = new Flock();
+
+            
+            flockOfDucks.Add(mallardDuck);
+            flockOfDucks.Add(redheadDuck);
+            flockOfDucks.Add(duckCall);
+            flockOfDucks.Add(rubberDuck);
+            flockOfDucks.Add(gooseDuck);
+
+            IQuackable mallardOne = duckFactory.CreateMallardDuck();
+            IQuackable mallardTwo = duckFactory.CreateMallardDuck();
+            IQuackable mallardThree = duckFactory.CreateMallardDuck();
+            IQuackable mallardFour = duckFactory.CreateMallardDuck();
+
+            flockOfMallards.Add(mallardOne);
+            flockOfMallards.Add(mallardTwo);
+            flockOfMallards.Add(mallardThree);
+            flockOfMallards.Add(mallardFour);
+
+            flockOfDucks.Add(flockOfMallards);
+            Console.WriteLine("Flock Norm");
+            Simulate(flockOfDucks);
+            Console.WriteLine("Flock Mallard");
+            Simulate(flockOfMallards);
+        }
+        void Simulate(IQuackable quackable)
+        {
+            quackable.Quack();
+        }
+
         ///////////////////// Adapter Pattern Method /////////////////////
         //This method for Adapter Design Pattern....
         static void TestDuck(Duck duck)

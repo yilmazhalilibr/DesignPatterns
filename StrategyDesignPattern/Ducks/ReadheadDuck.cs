@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public class ReadheadDuck : Duck
+    public class ReadheadDuck : Duck ,IQuackable
     {
       
         public ReadheadDuck()
@@ -19,6 +19,11 @@ namespace DesignPatterns
             Console.WriteLine("Readhead Duck : Display");
 
 
+        }
+
+        public void Quack()
+        {
+            Console.WriteLine("Quack_Readhead");
         }
     }
 }

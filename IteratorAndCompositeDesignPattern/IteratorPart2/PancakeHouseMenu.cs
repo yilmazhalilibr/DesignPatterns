@@ -27,6 +27,12 @@ namespace DesignPatterns.IteratorDesignPattern.IteratorPart2
         {
             return MenuList;
         }
+        public IEnumerator CreateIterator() 
+        {
+            IEnumerator iterator = MenuList.GetEnumerator();
+            return iterator;
+
+        }
 
     }
 }

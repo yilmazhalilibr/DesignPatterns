@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public class RubberDuck : Duck
+    public class RubberDuck : Duck , IQuackable
     {
        
         public RubberDuck()
@@ -19,7 +19,9 @@ namespace DesignPatterns
             Console.WriteLine("Rubber Duck : Display");
         }
 
-
-
+        public void Quack()
+        {
+            Console.WriteLine("Squeak_Rubber");
+        }
     }
 }
