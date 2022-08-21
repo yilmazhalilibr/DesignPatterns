@@ -12,7 +12,7 @@ namespace DesignPatterns
         PancakeHouseMenu pancakeHouseMenu;
         DinerMenu dinerMenu;
         List<object> breakFastItems;
-        MenuItem[] lunchItems;
+       // MenuItem[] lunchItems;
         public PrintMenu()
         {
             pancakeHouseMenu = new PancakeHouseMenu();

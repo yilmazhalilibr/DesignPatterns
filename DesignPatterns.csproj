@@ -75,11 +75,12 @@
     <Compile Include="CompoundDesignPattern\Flock.cs" />
     <Compile Include="CompoundDesignPattern\Goose.cs" />
     <Compile Include="CompoundDesignPattern\GooseAdapter.cs" />
-    <Compile Include="CompoundDesignPattern\IObserverCompound.cs" />
+    <Compile Include="CompoundDesignPattern\IObserver1.cs" />
     <Compile Include="CompoundDesignPattern\IQuackable.cs" />
     <Compile Include="CompoundDesignPattern\IQuackObservable.cs" />
-    <Compile Include="CompoundDesignPattern\Observable.cs" />
+    <Compile Include="CompoundDesignPattern\Observable1.cs" />
     <Compile Include="CompoundDesignPattern\QuackCounter.cs" />
+    <Compile Include="CompoundDesignPattern\Quackologist.cs" />
     <Compile Include="DecoratorDesignPattern\Beverage\Beverage.cs" />
     <Compile Include="DecoratorDesignPattern\Condiment\CondimentDecorator.cs" />
     <Compile Include="DecoratorDesignPattern\Beverage\DarkRoast.cs" />

@@ -303,13 +303,15 @@ namespace DesignPatterns
             Flock flockOfDucks = new Flock();
             Flock flockOfMallards = new Flock();
 
-            
+
+          
+
             flockOfDucks.Add(mallardDuck);
             flockOfDucks.Add(redheadDuck);
             flockOfDucks.Add(duckCall);
             flockOfDucks.Add(rubberDuck);
             flockOfDucks.Add(gooseDuck);
-
+            
             IQuackable mallardOne = duckFactory.CreateMallardDuck();
             IQuackable mallardTwo = duckFactory.CreateMallardDuck();
             IQuackable mallardThree = duckFactory.CreateMallardDuck();
@@ -319,12 +321,20 @@ namespace DesignPatterns
             flockOfMallards.Add(mallardTwo);
             flockOfMallards.Add(mallardThree);
             flockOfMallards.Add(mallardFour);
-
+            
             flockOfDucks.Add(flockOfMallards);
             Console.WriteLine("Flock Norm");
+            Quackologist quackologist = new Quackologist();
+            flockOfDucks.RegisterObserver(quackologist);
+            flockOfMallards.RegisterObserver(quackologist);
+
             Simulate(flockOfDucks);
             Console.WriteLine("Flock Mallard");
             Simulate(flockOfMallards);
+           
+
+
+
         }
         void Simulate(IQuackable quackable)
         {

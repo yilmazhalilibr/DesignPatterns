@@ -10,6 +10,7 @@ namespace DesignPatterns
     {
         IQuackable _duck;
         static int _numberOfQuacks;
+        
         public QuackCounter(IQuackable duck)
         {
             _duck = duck;
@@ -23,6 +24,16 @@ namespace DesignPatterns
         public static int GetQuacks()
         {
             return _numberOfQuacks;
+        }
+
+        public void RegisterObserver(IObserver1 observer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void NotifyObservers()
+        {
+            throw new NotImplementedException();
         }
     }
 }

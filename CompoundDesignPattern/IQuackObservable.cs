@@ -8,7 +8,7 @@ namespace DesignPatterns
 {
     public interface IQuackObservable
     {
-        void RegisterObserver(IObserverCompound observer);
+        void RegisterObserver(IObserver1 observer);
         void NotifyObservers();
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public interface IObserverCompound
+    public interface IObserver1
     {
-        void Update(QuackObservable duck);
+        void Update(IQuackObservable duck);
 
     }
 }

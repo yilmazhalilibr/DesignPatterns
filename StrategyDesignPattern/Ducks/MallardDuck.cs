@@ -6,25 +6,36 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public class MallardDuck : Duck , IQuackable
+    public class MallardDuck : Duck, IQuackable
     {
-
+        Observable1 _observable;
         public MallardDuck()
         {
-            quackBehavior = new Squeak();
-            flyBehavior = new FlyWithWings();
+            _observable = new Observable1(this);
         }
+        public void RegisterObserver(IObserver1 observer)
+        {
+            _observable.RegisterObserver(observer);
+        }
+        public void NotifyObservers()
+        {
+            _observable.NotifyObservers();
+        }
+
+      
+     
         public override void Display()
         {
             Console.WriteLine("Mallard Duck : Display");
-
-
-
         }
+
 
         public void Quack()
         {
-            Console.WriteLine("Quack_Mallard");
+            Console.WriteLine("Quack");
+            NotifyObservers();
         }
+
+
     }
 }

@@ -13,9 +13,20 @@ namespace DesignPatterns.CompoundDesignPattern
         {
             _goose = goose;
         }
+
+        public void NotifyObservers()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Quack()
         {
             _goose.Honk();
+        }
+
+        public void RegisterObserver(IObserver1 observer)
+        {
+            throw new NotImplementedException();
         }
     }
 }

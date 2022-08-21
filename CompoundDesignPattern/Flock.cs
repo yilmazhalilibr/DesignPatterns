@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    internal class Flock : IQuackable
+    public class Flock : IQuackable
     {
+       Observable1 _observable;
+
         List<IQuackable> quackers = new List<IQuackable>();
         public void Add(IQuackable quacker)
         {
             quackers.Add(quacker);
-        }
+            _observable = new Observable1(this);
 
+        }
         public void Quack()
         {
             IEnumerator<IQuackable> enumerator = quackers.GetEnumerator();
@@ -22,12 +25,18 @@ namespace DesignPatterns
             {
                 IQuackable quackable = enumerator.Current;
                 quackable.Quack();
+                NotifyObservers();
 
             }
         }
 
-
-
-
+        public void NotifyObservers()
+        {
+            _observable.NotifyObservers();
+        }
+        public void RegisterObserver(IObserver1 observer)
+        {
+            _observable.RegisterObserver(observer);
+        }
     }
 }
