@@ -1,5 +1,6 @@
 ﻿using DesignPatterns;
 using DesignPatterns.CompoundDesignPattern;
+using DesignPatterns.FlyweightDesignPattern;
 using DesignPatterns.IteratorDesignPattern.IteratorPart2;
 using DesignPatterns.ProxyDesignPattern.Proxy;
 using DesignPatterns.StateDesignPattern;
@@ -16,14 +17,14 @@ namespace DesignPatterns
             /// 
             /// 
             /// 
-            /////////////////////// Strategy Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Strategy Design Pattern Start ///////////////////////------------------------------
             /*
             Duck duck = new DecoyDuck();
             duck.Display();
             duck.PerformQuack();
             duck.PerformFly();
             */
-            /////////////////////// Strategy Desing Pattern End ///////////////////////
+            /////////////////////// Strategy Design Pattern End ///////////////////////
             ///
             /// 
             /// 
@@ -33,7 +34,7 @@ namespace DesignPatterns
             /// 
             /// 
             /// 
-            /////////////////////// Observer Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Observer Design Pattern Start ///////////////////////------------------------------
             /*
             RedFleetBase redFleetBase = new RedFleetBase("Süper işlemciler piyasada");
             redFleetBase.Information = "İşlemciler gelişiyor";
@@ -48,7 +49,7 @@ namespace DesignPatterns
             redFleetBase.AddOperator(new TankOperator { TankId = 801 });
             redFleetBase.Information = "Sınır ihlali.";
             */
-            /////////////////////// Observer Desing Pattern End ///////////////////////
+            /////////////////////// Observer Design Pattern End ///////////////////////
             ///
             /// 
             /// 
@@ -58,7 +59,7 @@ namespace DesignPatterns
             /// 
             /// 
             /// 
-            /////////////////////// Decorator Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Decorator Design Pattern Start ///////////////////////------------------------------
             /* 
              Beverage beverage = new Espresso();
              Console.WriteLine(beverage.GetDescription() + " $ " + beverage.Cost());
@@ -67,7 +68,7 @@ namespace DesignPatterns
              darkRoast = new Soy(darkRoast);
              Console.WriteLine(darkRoast.GetDescription() + " $ " + darkRoast.Cost());
             */
-            /////////////////////// Decorator Desing Pattern End ///////////////////////
+            /////////////////////// Decorator Design Pattern End ///////////////////////
             ///
             /// 
             /// 
@@ -77,7 +78,7 @@ namespace DesignPatterns
             /// 
             /// 
             /// 
-            /////////////////////// Factory Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Factory Design Pattern Start ///////////////////////------------------------------
             ///
             ///
             ///
@@ -86,7 +87,7 @@ namespace DesignPatterns
              PizzaStore store = new NYStylePizzaStore();
              Pizza pizza = store.OrderPizza("cheese", store);
             */
-            /////////////////////// Factory Desing Pattern End ///////////////////////
+            /////////////////////// Factory Design Pattern End ///////////////////////
             ///
             /// 
             /// 
@@ -96,13 +97,13 @@ namespace DesignPatterns
             /// 
             /// 
             /// 
-            /////////////////////// Singleton Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Singleton Design Pattern Start ///////////////////////------------------------------
             /*
             ChocolateBoiler.Instance.Drain();
             ChocolateBoiler.Instance.Fill();
             ChocolateBoiler.Instance.Boil();
             */
-            /////////////////////// Singleton Desing Pattern End ///////////////////////
+            /////////////////////// Singleton Design Pattern End ///////////////////////
             ///
             /// 
             /// 
@@ -112,7 +113,7 @@ namespace DesignPatterns
             ///
             ///
             ///
-            /////////////////////// Command Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Command Design Pattern Start ///////////////////////------------------------------
             /*
              SimpleRemoteControl simpleRemoteControl = new SimpleRemoteControl();
              Light light = new Light();
@@ -124,7 +125,7 @@ namespace DesignPatterns
              simpleRemoteControl.SetCommand(garageDoorOpen);
              simpleRemoteControl.ButtonWasPressed();
             */
-            /////////////////////// Command Desing Pattern End ///////////////////////
+            /////////////////////// Command Design Pattern End ///////////////////////
             ///
             ///
             ///
@@ -134,14 +135,14 @@ namespace DesignPatterns
             ///
             ///
             ///
-            /////////////////////// Adapter Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Adapter Design Pattern Start ///////////////////////------------------------------
             /*
              WildTurkey turkey = new WildTurkey();
              Duck duck = new MallardDuck();
              Duck Mallard = new TurkeyAdapter(turkey);
              TestDuck(Mallard);
              */
-            /////////////////////// Adapter Desing Pattern End ///////////////////////
+            /////////////////////// Adapter Design Pattern End ///////////////////////
             ///
             ///
             ///
@@ -151,12 +152,12 @@ namespace DesignPatterns
             ///
             ///
             ///
-            /////////////////////// Template Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Template Design Pattern Start ///////////////////////------------------------------
             /*
             Coffe coffe = new Coffe();
             coffe.PrepareRecipe();
             */
-            /////////////////////// Template Desing Pattern End ///////////////////////
+            /////////////////////// Template Design Pattern End ///////////////////////
             ///
             ///
             ///
@@ -166,7 +167,7 @@ namespace DesignPatterns
             ///
             ///
             ///
-            /////////////////////// Iterator & Composite  Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Iterator & Composite  Design Pattern Start ///////////////////////------------------------------
             /*
             PersonelAggregate aggregate = new PersonelAggregate();
             aggregate.Add(new Personel { Id = 1, Name = "Gençay", LastName = "Yıldız" });
@@ -188,7 +189,7 @@ namespace DesignPatterns
             Waitress waitress = new Waitress(pancakeHouseMenu,dinerMenu);
             waitress.PrintMenu();
             */
-            /////////////////////// Iterator & Composite Desing Pattern End ///////////////////////
+            /////////////////////// Iterator & Composite Design Pattern End ///////////////////////
             ///
             ///
             ///
@@ -198,7 +199,7 @@ namespace DesignPatterns
             ///
             ///
             ///
-            /////////////////////// State Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// State Design Pattern Start ///////////////////////------------------------------
             ///
             /*
             GumballMachine gumballMachine = new GumballMachine(5);
@@ -234,7 +235,7 @@ namespace DesignPatterns
             Console.WriteLine("*******");
             musicPlayer.Play();
             */
-            /////////////////////// State Desing Pattern End ///////////////////////
+            /////////////////////// State Design Pattern End ///////////////////////
             ///
             ///
             ///
@@ -244,7 +245,7 @@ namespace DesignPatterns
             ///
             ///
             ///
-            /////////////////////// Proxy Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Proxy Design Pattern Start ///////////////////////------------------------------
             /*
             string user, password;
             double price;
@@ -261,7 +262,7 @@ namespace DesignPatterns
                 Console.WriteLine("*************************");
             }
             */
-            /////////////////////// Proxy Desing Pattern End ///////////////////////
+            /////////////////////// Proxy Design Pattern End ///////////////////////
             ///
             ///
             ///
@@ -271,18 +272,35 @@ namespace DesignPatterns
             ///
             ///
             ///
-            /////////////////////// Compound Desing Pattern Start ///////////////////////------------------------------
+            /////////////////////// Compound Design Pattern Start ///////////////////////------------------------------
+            /*
             Program similator = new Program();
             AbstractDuckFactory factory = new CountingDuckFactory();
             similator.Simulate(factory);
-
-            /////////////////////// Compound Desing Pattern End ///////////////////////
+            */
+            /////////////////////// Compound Design Pattern End ///////////////////////
             ///
             ///
             ///
             ///
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+            ///
+            ///
+            ///
+            ///
+            /////////////////////// Flyweight Design Pattern Start ///////////////////////------------------------------
+            /*
+             * FOR UNITY ENGINE EXAMPLE
+            ScriptableObjectSimilation scriptableObjectSimilation = new ScriptableObjectSimilation();
+            var maxHp = scriptableObjectSimilation.GetMaxHp();
+            Console.WriteLine(maxHp);
+            */
+            /////////////////////// Flyweight Design Pattern End ///////////////////////
+            ///
+            ///
+            ///
+            ///
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 

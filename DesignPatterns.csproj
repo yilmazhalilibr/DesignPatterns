@@ -102,6 +102,7 @@
     <Compile Include="FactoryDesignPattern\PizzaStores\NYStylePizzaStore.cs" />
     <Compile Include="FactoryDesignPattern\PizzaCreatedStyle\NYStylePizza\NYStyleVeggiePizza.cs" />
     <Compile Include="FactoryDesignPattern\PizzaStores\PizzaStore.cs" />
+    <Compile Include="FlyweightDesignPattern\ScriptableObjectSimilation.cs" />
     <Compile Include="IteratorAndCompositeDesignPattern\IteratorPart1\IAggregate.cs" />
     <Compile Include="IteratorAndCompositeDesignPattern\IteratorPart1\IIterator.cs" />
     <Compile Include="IteratorAndCompositeDesignPattern\IteratorPart1\Personel.cs" />
